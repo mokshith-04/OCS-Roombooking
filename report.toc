@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {1}Project Inception \& Requirements}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}The Objective}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Core Requirements \& Rules}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Database Design \& Architecture}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Choosing PostgreSQL \& Prisma}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}The Schema Design}{3}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Backend API Implementation}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Authentication Flow (JWT \& bcrypt)}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The Core Overlap Algorithm}{4}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Refining the Search UX}{5}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Frontend Development}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vite \& React Configuration}{6}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Premium UI Design}{6}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Frontend Integration}{6}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Data Extraction \& Seeding}{7}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Parsing the PDF Document}{7}{section.5.1}%
+\contentsline {section}{\numberline {5.2}The Seed Script}{7}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Deployment \& Environment Management}{8}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Port Conflict Resolution}{8}{section.6.1}%
+\contentsline {section}{\numberline {6.2}GitHub CLI Integration}{8}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Conclusion}{9}{chapter.7}%
