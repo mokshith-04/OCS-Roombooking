@@ -1,0 +1,79 @@
+// Prisma Schema for Room Booking System
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  name     String
+  email    String    @unique
+  password String
+  role     Role      @default(MEMBER)
+  bookings Booking[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Block {
+  id        Int    @id @default(autoincrement())
+  blockName String @unique
+  rooms     Room[]
+
+  @@map("blocks")
+}
+
+model Room {
+  id                 Int       @id @default(autoincrement())
+  roomName           String
+  capacity           Int
+  availabilityStatus Boolean   @default(true)
+  blockId            Int
+  block              Block     @relation(fields: [blockId], references: [id])
+  bookings           Booking[]
+
+  @@map("rooms")
+}
+
+model Booking {
+  id           Int           @id @default(autoincrement())
+  userId       Int
+  roomId       Int
+  date         DateTime      @db.Date
+  startTime    String
+  endTime      String
+  purpose      Purpose
+  participants Int           @default(1)
+  status       BookingStatus @default(CONFIRMED)
+  user         User          @relation(fields: [userId], references: [id])
+  room         Room          @relation(fields: [roomId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("bookings")
+}
+
+enum Role {
+  ADMIN
+  MEMBER
+}
+
+enum Purpose {
+  OA
+  INTERVIEW
+  PPT
+}
+
+enum BookingStatus {
+  CONFIRMED
+  CANCELLED
+}
